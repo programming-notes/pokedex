@@ -4,7 +4,7 @@ import printMe from './print';
 
 function commponent() {
     const element = document.createElement('div');
-    element.innerHTML = _.join(['Hello!!!!!!!!!!!', 'Webpack'], ' ');
+    element.innerHTML = _.join(['Hello', 'Webpack!'], ' ');
     element.classList.add('hello');
 
     const btn = document.createElement('button');

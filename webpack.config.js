@@ -5,8 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     mode: 'development',
     entry: {
-        app: './src/index.js',
-        print: './src/print.ts',
+        app: './src/index.tsx'
     },
     devtool: 'inline-source-map',
     devServer: {
@@ -19,7 +18,9 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: 'Pokedex'
+            meta: { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
+            title: 'Pokedex',
+            template: "./src/index.html"
         })
     ],
     module: {
@@ -41,6 +42,11 @@ module.exports = {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: '/node_modules/'
+            },
+            {
+                enforce: "pre",
+                test: /\.js$/,
+                loader: "source-map-loader"
             }
         ]
     },

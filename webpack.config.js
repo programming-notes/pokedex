@@ -6,11 +6,15 @@ module.exports = {
     mode: 'development',
     entry: {
         app: './src/index.js',
-        print: './src/print.js'
+        print: './src/print.js',
+    },
+    devtool: 'inline-source-map',
+    devServer: {
+        contentBase: './dist',
     },
     output: {
         filename: '[name].bundle.js',
-        path: path.join(__dirname, 'dist')
+        path: path.join(__dirname, 'dist'),
     },
     plugins: [
         new CleanWebpackPlugin(),

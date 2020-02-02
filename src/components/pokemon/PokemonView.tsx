@@ -1,9 +1,14 @@
 import * as React from 'react';
 
+import Input from './UI/Input';
+
 class PokemonView extends React.Component {
     render() {
         return (
-            <div>Pokedex</div>
+            <>  
+                <div>Pokedex</div>
+                <Input />
+            </>
         )
     }
 }

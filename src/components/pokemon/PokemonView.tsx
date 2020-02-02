@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-import Input from './UI/Input';
+import PokemonForm from './UI/PokemonForm';
 
 class PokemonView extends React.Component {
     render() {
         return (
             <>  
                 <div>Pokedex</div>
-                <Input />
+                <PokemonForm />
             </>
         )
     }

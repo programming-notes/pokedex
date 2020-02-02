@@ -5,7 +5,9 @@
         "noImplicitAny": true,
         "module": "CommonJS",
         "target": "ES6",
-        "jsx": "react"
+        "jsx": "react",
+        "experimentalDecorators": true,
+        "allowJs": true
     },
 
     "exclude": ["node_modules"]

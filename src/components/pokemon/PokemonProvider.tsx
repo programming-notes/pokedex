@@ -21,6 +21,7 @@ class PokemonProvider extends React.Component<Props> {
     }
 
     render() {
+        console.log(this.props);
         return (
             <PokemonController viewModel={this.viewModel} />
         )

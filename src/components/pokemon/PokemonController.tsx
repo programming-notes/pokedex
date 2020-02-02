@@ -5,21 +5,33 @@ interface Props {
     viewModel: any 
 }
 
-class PokemonController extends React.Component<Props> {
+interface State {
+    pokemonImage: string,
+    pokemonName: string
+}
+
+class PokemonController extends React.Component<Props, State>{
     constructor(props: Props) {
         super(props)
         this.state = {
             pokemonImage: '1',
-            pokemonName: 'bulbasaur'
+            pokemonName: 'bulbasaur'
         };
     }
+
+    setPokemonName = (name: string):void => (
+        this.setState({ pokemonName: name.toLowerCase() })
+    )
 
 
     render() {
         const { viewModel }:any  = this.props;
 
         return (
-            <PokemonView {...viewModel} />
+            <PokemonView
+                pokemonName={this.state.pokemonName}
+                setPokemonName={this.setPokemonName}
+            />
         )
     }
 }

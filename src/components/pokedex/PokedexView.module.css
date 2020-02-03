@@ -16,8 +16,8 @@
     font-family: monospace;
     text-transform: uppercase;
     border: 2px inset #d3d3d3;
+    width: 100%;
     color: #3f3f3f;
-    flex-grow: 2;
     height: 2rem;
 }
 
@@ -28,6 +28,10 @@
 .pokedexInput:focus,
 .pokedexButton:focus {
     outline: none;
+}
+
+.pokedexButton:hover {
+    cursor: pointer;
 }
 
 .pokedexButton {
@@ -52,7 +56,7 @@
 
 .pokeImageContainer {
     box-sizing: border-box;
-    border: 2px ridge #d3d3d3;
+    border: 4px ridge #e1e1e1;
     border-radius: 1rem;
     min-width: 240px;
     display: flex;
@@ -63,7 +67,7 @@
 
 .pokemonDescription {
     font-size: 16px;
-    padding: 1rem;
+    padding: 0.75rem;
 }
 
 @media (max-width: 600px) {

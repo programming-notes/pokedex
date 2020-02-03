@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import Input from '../UI/Input';
-import Button from '../UI/Button';
+import Input from './Input';
+import Button from './Button';
 import searchIcon from '../../../assets/search-icon.svg'
 
 import {
@@ -16,8 +16,7 @@ interface Props {
     style?: { [attr:string]: string }
 }
 
-const PokemonForm = (props: Props) => {
-    console.log(searchIcon);
+const SearchBar = (props: Props) => {
     return (
         <form
             className={pokemonForm}
@@ -41,4 +40,4 @@ const PokemonForm = (props: Props) => {
 }
 
 
-export default PokemonForm;
+export default SearchBar;

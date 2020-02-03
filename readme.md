@@ -18,3 +18,5 @@ This pokedex app is a frontend project featuring the Model-View-ViewModel patter
     * TypeScript
 
 * [React & Webpack](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
+
+* [CSS-Modules with TypeScript & React](https://github.com/dropbox/typed-css-modules-webpack-plugin)

@@ -1,16 +1,16 @@
 import * as React from 'react';
 
 interface Props {
+    className?: string,
     type?: "button" | "submit",
     style?: { [attr:string]: string },
-    children?: string
+    children?: any
 }
 
 const Button = (props: Props) => {
     return (
         <button
-            type={props.type}
-            style={props.style}
+            {...props}
         >
             {props.children}
         </button>

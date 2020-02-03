@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Provider } from 'mobx-react';
-import PokemonProvider from './components/pokemon/PokemonProvider';
+import PokemonProvider from './components/pokedex/PokemonProvider';
 import RootStore from './models/rootStore';
 
 const rootStore = new RootStore();

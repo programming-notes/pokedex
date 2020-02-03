@@ -1,0 +1,83 @@
+.pokedex {
+    border: 1px solid red;
+}
+
+.pokemonForm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pokedexInput {
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 2rem;
+    font-family: monospace;
+    text-transform: uppercase;
+    border: 2px inset #d3d3d3;
+    width: 100%;
+    color: #3f3f3f;
+    height: 2rem;
+}
+
+.pokedexInput:focus {
+    border: 2px outset #d3d3d3;
+}
+
+.pokedexInput:focus,
+.pokedexButton:focus {
+    outline: none;
+}
+
+.pokedexButton:hover {
+    cursor: pointer;
+}
+
+.pokedexButton {
+    border: 2.5px solid #d3d3d3;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0;
+    padding-left: 1.5px;
+    min-width: 2rem;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.5rem;
+}
+
+.pokemonBio {
+    display: flex;
+    flex-direction: row;
+}
+
+.pokeImageContainer {
+    box-sizing: border-box;
+    border: 4px ridge #e1e1e1;
+    border-radius: 1rem;
+    min-width: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 1rem 0;
+}
+
+.pokemonDescription {
+    font-size: 16px;
+    padding: 0.75rem;
+}
+
+@media (max-width: 600px) {
+    .pokemonBio {
+        flex-direction: column;
+    }
+
+    .pokeImageContainer {
+        box-sizing: border-box;
+        border: none;
+        padding: 1rem 0;
+    }   
+}

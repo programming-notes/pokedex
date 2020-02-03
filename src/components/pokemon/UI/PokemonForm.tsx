@@ -3,6 +3,8 @@ import * as React from 'react';
 import Input from '../UI/Input';
 import Button from '../UI/Button';
 
+import * as styles from '../PokedexView.module.css';
+
 interface Props {
     action?: string,
     setPokemonName: (name: string) => void,
@@ -15,7 +17,6 @@ const PokemonForm = (props: Props) => {
         <form
             onSubmit={(e: React.FormEvent<HTMLFormElement>): void => {
                 e.preventDefault();
-                console.log(e.currentTarget);
                 props.setPokemonName(e.currentTarget.pokemonName.value);
             }}
             action={props.action}

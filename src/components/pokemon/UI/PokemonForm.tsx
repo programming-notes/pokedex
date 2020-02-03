@@ -2,8 +2,12 @@ import * as React from 'react';
 
 import Input from '../UI/Input';
 import Button from '../UI/Button';
+import searchIcon from '../../../assets/search-icon.svg'
 
-import * as styles from '../PokedexView.module.css';
+import {
+    pokedexButton,
+    pokemonForm, 
+    pokedexInput } from '../PokedexView.module.css';
 
 interface Props {
     action?: string,
@@ -13,16 +17,25 @@ interface Props {
 }
 
 const PokemonForm = (props: Props) => {
+    console.log(searchIcon);
     return (
         <form
+            className={pokemonForm}
             onSubmit={(e: React.FormEvent<HTMLFormElement>): void => {
                 e.preventDefault();
                 props.setPokemonName(e.currentTarget.pokemonName.value);
             }}
             action={props.action}
         >
-            <Input name="pokemonName" />
-            <Button type="submit">Search</Button>
+            <Input 
+                className={pokedexInput}
+                name="pokemonName" />
+            <Button
+                className={pokedexButton}
+                type="submit"
+            >
+                <img style={{width: '100%', maxWidth: '2rem', maxHeight: '2rem'}} src={searchIcon} alt="search button" />
+            </Button>
         </form>
     )
 }

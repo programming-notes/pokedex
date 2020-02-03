@@ -1,6 +1,11 @@
 declare const styles: {
-  readonly "Pokedex": string;
-  readonly "PokedexInput": string;
+  readonly "pokedex": string;
+  readonly "pokemonForm": string;
+  readonly "pokedexInput": string;
+  readonly "pokedexButton": string;
+  readonly "pokemonBio": string;
+  readonly "pokeImageContainer": string;
+  readonly "pokemonDescription": string;
 };
 export = styles;
 

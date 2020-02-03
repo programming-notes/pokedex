@@ -1,12 +1,14 @@
 import * as React from 'react';
 
 interface Props {
-    pokeImgUrl: string
+    className?: string,
+    src: string,
+    alt: string
 }
 
 class PokemonImage extends React.Component<Props> {
     render() {
-        return <img src={this.props.pokeImgUrl} />
+        return <img {...this.props} />
     }
 }
 

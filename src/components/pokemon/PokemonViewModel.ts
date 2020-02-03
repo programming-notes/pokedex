@@ -5,6 +5,10 @@ export default class PokemonViewModel {
         this.store = pokemonStore;
     }
 
+    public getPokeImgUrl = (name: string): string => (
+        `http://www.pokestadium.com/sprites/xy/${name.toLowerCase()}.gif`
+    )
+
     public getPokemons = () => {
         return this.store.getPokemons()
     }

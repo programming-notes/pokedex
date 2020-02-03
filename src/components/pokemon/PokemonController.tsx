@@ -1,5 +1,5 @@
 import * as React from 'react';
-import PokemonView from './PokemonView';
+import PokemonView from './PokedexView';
 
 interface Props { 
     viewModel: any 
@@ -20,16 +20,16 @@ class PokemonController extends React.Component<Props, State>{
     }
 
     setPokemonName = (name: string):void => (
-        this.setState({ pokemonName: name.toLowerCase() })
+        this.setState({ pokemonName: name })
     )
 
 
     render() {
         const { viewModel }:any  = this.props;
-
+        const pokeImgUrl: string = viewModel.getPokeImgUrl(this.state.pokemonName);
         return (
             <PokemonView
-                pokemonName={this.state.pokemonName}
+                pokeImgUrl={pokeImgUrl}
                 setPokemonName={this.setPokemonName}
             />
         )

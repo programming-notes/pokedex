@@ -1,23 +1,24 @@
-import PokemonModel, { IPokemon } from './domain/PokmonModel';
+import PokemonModel, { IPokemon } from './domain/PokedexModel';
+import PokedexModel from './domain/PokedexModel';
 
 interface StoreTypes {
-    POKEMON_MODEL: string
+    POKEDEX_MODEL: string
 }
 
 class RootStore {
     public static type:StoreTypes = {
-        POKEMON_MODEL: 'pokemonModel'
+        POKEDEX_MODEL: 'pokemonModel'
     }
 
-    public pokemonModel: PokemonModel
+    public pokedexModel: PokedexModel
 
     constructor() {
-        this.pokemonModel = new PokemonModel();
+        this.pokedexModel = new PokedexModel();
     }
 
 
     public getStore = () => ({
-        [RootStore.type.POKEMON_MODEL]: this.pokemonModel
+        [RootStore.type.POKEDEX_MODEL]: this.pokedexModel
     })
 }
 

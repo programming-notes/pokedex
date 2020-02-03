@@ -10,18 +10,17 @@ interface Props {
 }
 
 
-@inject(RootStore.type.POKEMON_MODEL)
+@inject(RootStore.type.POKEDEX_MODEL)
 class PokemonProvider extends React.Component<Props> {
     viewModel: PokemonViewModel
 
     constructor(props: Props) {
         super(props);
-        const pokemonModel = props[RootStore.type.POKEMON_MODEL];
+        const pokemonModel = props[RootStore.type.POKEDEX_MODEL];
         this.viewModel = new PokemonViewModel(pokemonModel);
     }
 
     render() {
-        console.log(this.props);
         return (
             <PokemonController viewModel={this.viewModel} />
         )

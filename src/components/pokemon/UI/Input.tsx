@@ -13,6 +13,7 @@ const Input = (props: Props) => {
     const { name, type, placeholder, value, onChange, style } = props;
     return (
         <input
+            autoComplete="off"
             name={name}
             style={style}
             onChange={onChange} 

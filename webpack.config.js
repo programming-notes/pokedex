@@ -1,6 +1,7 @@
 const path              = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { TypedCssModulesPlugin } = require('typed-css-modules-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -21,15 +22,23 @@ module.exports = {
             meta: { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
             title: 'Pokedex',
             template: "./src/index.html"
+        }),
+        new TypedCssModulesPlugin({
+            globPattern: 'src/**/*.css'
         })
     ],
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.module\.css$/i,
                 use: [
                     'style-loader',
-                    'css-loader'
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                        }
+                    }
                 ]
             },
             {
@@ -51,6 +60,6 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js']
+        extensions: ['.tsx', '.ts', '.js', '.css']
     }
 }
